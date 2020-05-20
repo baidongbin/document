@@ -12,10 +12,22 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      loadSidebar: true,// 目录
+      subMaxLevel: 2,// 目录最大层级
+      loadNavbar: true,// 导航
+      coverpage: true,// 封面
+      onlyCover: true,// 只显示封面
+      repo: 'https://github.com/baidongbin/document',// 仓库地址
+      search: {
+        maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+        paths: 'auto',                      // or 'auto'，匹配文件路径
+        placeholder: 'Type to search',  // 搜索提示框文字， 支持本地化，例子在下面
+        noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+        depth: 2,                       // 搜索标题的最大程级, 1 - 6
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
